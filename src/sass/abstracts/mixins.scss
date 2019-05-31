@@ -1,0 +1,10 @@
+@mixin iconsFont {
+  font-size: 1.5rem;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 200;
+  color: #fff;
+}
+
+@mixin mainLayout {
+  padding: 5rem 10rem;
+}

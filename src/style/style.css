@@ -1,3 +1,96 @@
+@import url("https://fonts.googleapis.com/css?family=Oswald:200&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Harmattan&display=swap");
+.description {
+  font-family: "Anton", sans-serif;
+  font-size: 6rem;
+  line-height: 8rem;
+  color: #fff;
+}
+.description_special {
+  color: #ff4d25;
+}
+
+.description-etc {
+  display: inline-block;
+  padding-top: 5rem;
+  margin: 5rem 0;
+}
+.description-etc__title {
+  font-family: "Harmattan", sans-serif;
+  font-size: 2.3rem;
+  font-weight: bold;
+  color: #ff4d25;
+  padding-bottom: 1rem;
+}
+.description-etc__p {
+  font-family: "Harmattan", sans-serif;
+  line-height: 2.5rem;
+  font-weight: 300;
+  font-size: 2rem;
+  color: #fff;
+}
+.description-etc__p__bar {
+  font-size: 1.7rem;
+}
+
+.info_icon {
+  font-size: 1.5rem;
+  font-family: "Oswald", sans-serif;
+  font-weight: 200;
+  color: #fff;
+  padding: 0 0.9rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-family: "Oswald", sans-serif;
+  font-weight: 200;
+  color: #fff;
+}
+
+.projects {
+  font-size: 0;
+  padding: 5rem 10rem;
+  padding-top: 0rem;
+}
+.projects .description {
+  padding-bottom: 10rem;
+}
+.projects__line {
+  display: flex;
+  justify-content: space-between;
+}
+.projects__card {
+  display: inline-block;
+  padding: 2rem 1rem;
+  width: 44%;
+  font-size: 10rem;
+  min-height: 80vh;
+  background-color: #fff;
+}
+.projects__amazon__description {
+  font-size: 1.5rem;
+}
+
+#header {
+  min-height: 100vh;
+  overflow: hidden;
+  padding: 5rem 10rem;
+}
+#header .bsens {
+  display: flex;
+  justify-content: space-between;
+}
+#header .description {
+  padding-top: 25rem;
+}
+
+div.wrapper {
+  background-color: #333333;
+  min-height: 100vh;
+}
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -106,6 +199,10 @@ section {
   display: block;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
   line-height: 1;
 }
@@ -131,6 +228,16 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+::-moz-selection {
+  background: #ff4d25;
+  color: #fff;
+}
+
+::selection {
+  background: #ff4d25;
+  color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */

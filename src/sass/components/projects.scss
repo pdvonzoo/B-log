@@ -1,0 +1,33 @@
+.projects {
+  font-size: 0;
+  @include mainLayout;
+  padding-top: 0rem;
+
+  .description {
+    padding-bottom: 10rem;
+  }
+
+  &__line {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__card {
+    display: inline-block;
+    padding: 2rem 1rem;
+    width: 44%;
+    font-size: 10rem;
+    min-height: 80vh;
+    background-color: #fff;
+  }
+
+  &__amazon {
+    // background-color: #2ea9a8;
+    // color: #f8fbfb;
+
+    &__description {
+      font-size: 1.5rem;
+      // color: #4d2b83;
+    }
+  }
+}

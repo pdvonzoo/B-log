@@ -1,0 +1,44 @@
+.description {
+  font-family: 'Anton', sans-serif;
+  font-size: 6rem;
+  line-height: 8rem;
+  color: #fff;
+
+  &_special {
+    color: #ff4d25;
+  }
+}
+
+.description-etc {
+  display: inline-block;
+  padding-top: 5rem;
+  margin: 5rem 0;
+
+  &__title {
+    font-family: 'Harmattan', sans-serif;
+    font-size: 2.3rem;
+    font-weight: bold;
+    color: #ff4d25;
+    padding-bottom: 1rem;
+  }
+
+  &__p {
+    font-family: 'Harmattan', sans-serif;
+    line-height: 2.5rem;
+    font-weight: 300;
+    font-size: 2rem;
+    color: #fff;
+
+    &__bar {
+      font-size: 1.7rem;
+    }
+  }
+
+}
+
+// .skills {
+//   font-family: 'Anton', sans-serif;
+//   font-size: 6.6rem;
+//   line-height: 8.4rem;
+//   color: #fff;
+// }

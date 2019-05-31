@@ -1,0 +1,14 @@
+#header {
+  min-height: 100vh;
+  overflow: hidden;
+  @include mainLayout;
+
+  .bsens {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .description {
+    padding-top: 25rem;
+  }
+}

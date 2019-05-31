@@ -1,0 +1,6 @@
+.info {
+  &_icon {
+    @include iconsFont;
+    padding: 0 .9rem;
+  }
+}

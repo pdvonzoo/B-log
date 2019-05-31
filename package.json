@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/pdvonzoo/B-log/issues"
   },
-  "homepage": "https://github.com/pdvonzoo/B-log#readme"
+  "homepage": "https://github.com/pdvonzoo/B-log#readme",
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.8.2"
+  }
 }
