@@ -17,5 +17,8 @@
     "url": "https://github.com/pdvonzoo/B-log/issues"
   },
   "homepage": "https://github.com/pdvonzoo/B-log#readme",
-  "devDependencies": {}
+  "devDependencies": {},
+  "dependencies": {
+    "sass": "^1.22.1"
+  }
 }
