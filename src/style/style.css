@@ -66,8 +66,13 @@
   width: 44%;
   font-size: 6rem;
   font-weight: bold;
+  text-decoration: none;
   min-height: 60vh;
   background-color: #fff;
+}
+.projects__card:hover {
+  transform: scale(1.02);
+  transition: all 0.2s ease-in-out;
 }
 .projects__card__wrapper {
   width: 100%;
