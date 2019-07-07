@@ -22,8 +22,8 @@
     background-color: #fff;
 
     &:hover {
-      transform: scale(1.02);
-      transition: all .2s ease-in-out;
+      -webkit-filter: contrast(200%);
+      filter: contrast(200%);
     }
 
     &__wrapper {
