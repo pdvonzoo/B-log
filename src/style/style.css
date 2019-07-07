@@ -90,11 +90,12 @@
 }
 
 .projects__amazon {
-  background-color: #2ea9a8;
+  background-color: #232f3e;
   color: #f8fbfb;
 }
 
 .projects__amazon__skills {
+  color: #ff9901;
   font-size: 1.7rem;
   font-weight: 400;
   line-height: 2rem;
