@@ -1,274 +1,862 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>H-SENS Project</title>
-    <link rel="stylesheet" href="../style/style.css" />
-  </head>
-  <body>
-    <h1 id="hsens">H-SENS</h1>
+<html>
 
-    <h2 id="1skills">1. Skills</h2>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>H-SENS</title>
+  <style>
+    /* webkit printing magic: print all background colors */
+    html {
+      -webkit-print-color-adjust: exact;
+    }
 
-    <p>
-      Styled Component | React(Hooks) | GraphQL | Apollo | Node.js | MongoDB
-    </p>
+    * {
+      box-sizing: border-box;
+      -webkit-print-color-adjust: exact;
+    }
 
-    <h2 id="2">2. 개발 방식</h2>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
 
-    <p>이번 프로젝트는 다음 세 가지에 초점을 맞췄습니다.</p>
+    @media only screen {
+      body {
+        margin: 2em auto;
+        max-width: 900px;
+        color: rgb(55, 53, 47);
+      }
+    }
 
-    <ol>
-      <li><strong>협업 프로세스에 대한 깊은 경험을 한다.</strong></li>
+    body {
+      line-height: 1.5;
+      white-space: pre-wrap;
+    }
 
-      <li><strong>설계에 신경 쓴 프론트 엔드 코드를 작성하자.</strong></li>
+    a,
+    a.visited {
+      color: inherit;
+      text-decoration: underline;
+    }
 
-      <li>
-        <strong
-          >백엔드 코드를 구현하여 HTTP 통신에 대해서 더 깊이 이해하도록
-          노력한다.</strong
-        >
-      </li>
-    </ol>
+    .pdf-relative-link-path {
+      font-size: 80%;
+      color: #444;
+    }
 
-    <p>
-      두 명으로 구성된 팀으로 개발한 프로젝트이며 github를 사용해서 개발을
-      진행하였습니다.
-    </p>
+    h1,
+    h2,
+    h3 {
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+      font-weight: 600;
+      margin-bottom: 0;
+    }
 
-    <h3 id="21">2-1 협업</h3>
+    .page-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-top: 0;
+      margin-bottom: 0.75em;
+    }
 
-    <ul>
-      <li>
-        <strong>회의 및 프로젝트 기본 개요</strong>: Wiki를 사용하여
-        진행하였습니다.
-      </li>
+    h1 {
+      font-size: 1.875rem;
+      margin-top: 1.875rem;
+    }
 
-      <li>
-        <strong>업무 분담</strong>: issues 탭에 milestone을 추가하고 해당 내용에
-        해당하는 세부적인 내용은 issue를 추가하여 관리하였습니다.
-      </li>
+    h2 {
+      font-size: 1.5rem;
+      margin-top: 1.5rem;
+    }
 
-      <li>
-        <strong>업무 진행 상황</strong>: project에 todo List를 추가하여
-        관리하였습니다.
-      </li>
+    h3 {
+      font-size: 1.25rem;
+      margin-top: 1.25rem;
+    }
 
-      <li>
-        <strong>Sprint</strong>: 스프린트 단위는 1주를 기본으로 하고 이후에
-        feature branch를 dev branch에 머지했습니다. 이후 버전 별로 릴리즈를 하여
-        태그를 추가하였습니다.
-      </li>
+    .source {
+      border: 1px solid #ddd;
+      border-radius: 3px;
+      padding: 1.5em;
+      word-break: break-all;
+    }
 
-      <li>
-        <strong>Commutication:</strong> 리모트 형식으로 작업을 진행하였고
-        slack을 이용하였습니다.
-      </li>
-    </ul>
+    .callout {
+      border-radius: 3px;
+      padding: 1rem;
+    }
 
-    <h3 id="22client">2-2 Client</h3>
+    figure {
+      margin: 1.25em 0;
+      page-break-inside: avoid;
+    }
 
-    <ul>
-      <li><strong>설계</strong></li>
-    </ul>
+    figcaption {
+      opacity: 0.5;
+      font-size: 85%;
+      margin-top: 0.5em;
+    }
 
-    <p>
-      이번 프로젝트에서 TDD를 사용하지는 않았지만 지난 amazon project를 진행
-      하며 설계의 중요성을 깨달았고 이번 프로젝트도 그렇게 진행하고 싶었습니다.
-      프로젝트를 시작한 첫 주는 설계에 초점을 둔 기획회의의 연속이었습니다.
-      노트, 화이트보드에 <strong>컴포넌트 간 의존 관계</strong>를 그리고 연결
-      해보았습니다. 또 서비스에 필요한 기능을 구체화 했습니다.
-    </p>
+    mark {
+      background-color: transparent;
+    }
 
-    <ul>
-      <li><strong>디자인</strong></li>
-    </ul>
+    .indented {
+      padding-left: 1.5em;
+    }
 
-    <p>
-      주제와 컨셉이 정해진 후 개발 방식에 대해서 고민해 보았습니다. 디자인에
-      대해서 많은 시간을 투자하기 힘든 상황이었기 때문에 페이지 별 기능을
-      정의하고 큰 맥락에서 컴포넌트 간의 의존관계를 정의한 후 코드를 작성하면서
-      레이이웃을 잡아갔습니다.
-    </p>
+    hr {
+      background: transparent;
+      display: block;
+      width: 100%;
+      height: 1px;
+      visibility: visible;
+      border: none;
+      border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+    }
 
-    <h3 id="23server">2-3 Server</h3>
+    img {
+      max-width: 100%;
+    }
 
-    <ul>
-      <li><strong>설계</strong></li>
-    </ul>
+    @media only print {
+      img {
+        max-height: 100vh;
+        object-fit: contain;
+      }
+    }
 
-    <p>
-      프론트엔드 설계를 완료한 후 백엔드 설계를 시작하였습니다. 각 컴포넌트 별로
-      필요한 데이터를 정리하고 해당 데이터에 따른 Router를 만들었습니다. 초기엔
-      Restful API를 지향했지만 이후 GraphQL을 사용하여 재정의 하였습니다.
-    </p>
+    @page {
+      margin: 1in;
+    }
 
-    <ul>
-      <li><strong>데이터베이스</strong></li>
-    </ul>
+    .collection-content {
+      font-size: 0.875rem;
+    }
 
-    <p>
-      No-SQL기반의 Mongodb를 사용했습니다. 프론트엔드 개발자이기에
-      데이터베이스에 대한 이론 지식이 부족해서 해당 데이터베이스의 장점을
-      파악하며 DB를 설계하기 위해 노력했습니다.
-    </p>
+    .column-list {
+      display: flex;
+      justify-content: space-between;
+    }
 
-    <h2 id="3">3. 협업 관련 세부사항</h2>
+    .column {
+      padding: 0 1em;
+    }
 
-    <h3 id="31">3-1 협업 관련 커뮤니케이션</h3>
+    .column:first-child {
+      padding-left: 0;
+    }
 
-    <p>
-      리모트 형식으로 개발을 진행했기 때문에 이 부분에 굉장히 중요했습니다. 협업
-      관련 툴은 slack과 github를 사용했습니다.
-    </p>
+    .column:last-child {
+      padding-right: 0;
+    }
 
-    <ul>
-      <li>
-        slack: 프로젝트 관련 작은 부분들에 대한 이야기를 나눌때 slack을 통해
-        커뮤니케이션을 하였습니다.
-      </li>
+    .table_of_contents-item {
+      display: block;
+      font-size: 0.875rem;
+      line-height: 1.3;
+      padding: 0.125rem;
+    }
 
-      <li>
-        github
+    .table_of_contents-indent-1 {
+      margin-left: 1.5rem;
+    }
 
-        <ul>
-          <li>
-            issues: mileston을 정의하고 각자 해야 하는 작업에 대해서 github의
-            issues 탭을 사용했습니다. 해결된 이슈에 대해서는 close하기 전 commit
-            id를 적어 두어 프로젝트 진행 로그를 남겼습니다.
-          </li>
+    .table_of_contents-indent-2 {
+      margin-left: 3rem;
+    }
 
-          <li>
-            project: github의 project 탭을 사용하여 todo를 정의하였습니다.
-            issues와 관련된 작업들을 시각화하기 위해 사용하였습니다.
-          </li>
+    .table_of_contents-indent-3 {
+      margin-left: 4.5rem;
+    }
 
-          <li>
-            wiki: 회의록과 프로젝트 관련 정의를 하기 위해서 wiki 탭을
-            사용하였습니다. 프로젝트에 관련된 정의들을 적어 두었기 때문에 이후
-            프로젝트 진행을 하면서 지난 기록들을 보면서 작업을 진행하기에
-            좋았습니다.
-          </li>
-        </ul>
-      </li>
-    </ul>
+    .table_of_contents-link {
+      text-decoration: none;
+      opacity: 0.7;
+      border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+    }
 
-    <h3 id="32sprint">3-2 sprint</h3>
+    table,
+    th,
+    td {
+      border: 1px solid rgba(55, 53, 47, 0.09);
+      border-collapse: collapse;
+    }
 
-    <p>
-      1주 단위로 sprint를 나눴습니다. 매 주 sprint+해당 주 차(예, sprint1)의
-      브랜치를 만들었습니다. 또 금요일에 해당 주에 각자의 issues를 마무리하고
-      회고를 한 뒤 dev 브랜치에 머지한 후 릴리즈를 하여 tag를 추가했습니다.
-    </p>
+    table {
+      border-left: none;
+      border-right: none;
+    }
 
-    <h2 id="4client">4. Client 관련 세부사항</h2>
+    th,
+    td {
+      font-weight: normal;
+      padding: 0.25em 0.5em;
+      line-height: 1.5;
+      min-height: 1.5em;
+      text-align: left;
+    }
 
-    <h3 id="41">4-1 컴포넌트 설계</h3>
+    th {
+      color: rgba(55, 53, 47, 0.6);
+    }
 
-    <p>
-      컴포넌트를 나누는 방식에 대한 많은 고민이 있었는데요. 많은 고민을 했던
-      부분이기 때문에 세 번의 변경이 있었습니다.
-    </p>
+    ol,
+    ul {
+      margin: 0;
+      margin-block-start: 0.6em;
+      margin-block-end: 0.6em;
+    }
 
-    <p>
-      <strong
-        >1) 모든 컴포넌트를 Component 폴더에 넣고 Router 파일을 정의하기</strong
-      >
-    </p>
+    li>ol:first-child,
+    li>ul:first-child {
+      margin-block-start: 0.6em;
+    }
 
-    <p>
-      모든 page에 대한 컴포넌트에서 버튼 같이 작은 컴포넌트까지 모든 파일을
-      Component 폴더에 정의하였습니다. 또 router관련한 정의는 router 파일에 모두
-      작성하였습니다. 이렇게 정의하는 것에 대해서 고민이 생겼습니다. state관리를
-      하는 컴포넌트의 크기가 너무 커진다는 것이었습니다. 이 방식을 해결하기
-      위해서 구글링을 하였고 Presenter, Container로 역할을 나눈 컴포넌트 설계
-      방식을 찾게 되었습니다.
-    </p>
+    ul>li {
+      list-style: disc;
+    }
 
-    <p>
-      <strong
-        >2) Component 폴더 내부를 Presenter, Container 폴더로 나누기</strong
-      >
-    </p>
+    ul.to-do-list {
+      text-indent: -1.7em;
+    }
 
-    <p>
-      Component 폴더 내부에 모든 파일들의 두 가지 분류로 나눴습니다. state를
-      관리하는 컴포넌트는 Container 폴더로, 템플릿 관련 기능을 하는 컴포넌트는
-      Presenter에 두었습니다. 처음 폴더 구조를 재 설정하여 코드를 작성할 때는
-      순조로웠습니다. 하지만 시간이 지날 수록 같은 일을 하는 컴포넌트 간의
-      거리가 멀어서 리펙토링이 불편했고 굳이 깊이를 한 단계 더 만드는 것이
-      불필요하다는 생각이 들었습니다.
-    </p>
+    ul.to-do-list>li {
+      list-style: none;
+    }
 
-    <p><strong>3) Router 기분으로 컴포넌트 나누기</strong></p>
+    .to-do-children-checked {
+      text-decoration: line-through;
+      opacity: 0.375;
+    }
 
-    <p>
-      기존의 Container 폴더와 Presenter 폴더를 제거하였습니다. Router 기준으로
-      컴포넌트를 생성하였습니다. 페이지 별로 컴포넌트를 만들고 재사용의 가치가
-      있는 컴포넌트들을 따로 구성하였습니다. 맨 처음 설계한
-      <strong>1)</strong> 구조와 비슷했지만 차이가 있습니다. 새롭게 변경한
-      설계에서는 각 컴포넌트에서 state 관리로 인하여 파일이 크기가 커진 상황이
-      오면 그 컴포넌트 내부의 파일에 대해서 state 관리를 하는 Container 역할의
-      컴포넌트, 템플레이팅 기능을 하는 Presenter 컴포넌트로 나눴습니다.
-      결과적으로 컴포넌트의 역할이 더 명확해졌고 컴포넌트의 응집성이
-      높아졌습니다.
-    </p>
+    ul.toggle>li {
+      list-style: none;
+    }
 
-    <h3 id="42state">4-2 state 관리</h3>
+    ul {
+      padding-inline-start: 1.7em;
+    }
 
-    <p>state 관리에 대해서도 세 번의 변경이 있었습니다.</p>
+    ul>li {
+      padding-left: 0.1em;
+    }
 
-    <p><strong>1) useState, useEffect</strong></p>
+    ol {
+      padding-inline-start: 1.6em;
+    }
 
-    <p>
-      Hooks로 개발을 시작했기 때문에 시작은 useState와 useEffect를 사용하여
-      state를 관리하였습니다. 처음엔 해당 메서드로 state 관리를 해도 충분했지만
-      컴포넌트의 depth가 깊어지자 점점 관리하기 복잡한 부분이 생겨났습니다.
-      props의 전달에 복잡함에 flux architecture를 활용하기로 했습니다.
-    </p>
+    ol>li {
+      padding-left: 0.2em;
+    }
 
-    <p><strong>2) useContext, useReducer</strong></p>
+    .mono ol {
+      padding-inline-start: 2em;
+    }
 
-    <p>
-      action, store, dispatch의 역할을 통해 state를 전역에서 관리하는 Flux
-      Architecture의 방식을 활용하여 action을 정의하고 useContext로 store을
-      만들고 useReducer를 dispatch로 사용하였습니다. 이 방식을 사용하며 state
-      관리을 간소화 하였습니다. 하지만 이 작업을 마친 후 restful API를 통해
-      정의하는 과정에서 url관리의 복잡함을 느꼈기 때문에 GraphQL을 도입하게
-      되었습니다.
-    </p>
+    .mono ol>li {
+      text-indent: -0.4em;
+    }
 
-    <p><strong>3) Apollo Client Server</strong></p>
+    .toggle {
+      padding-inline-start: 0em;
+      list-style-type: none;
+    }
 
-    <p>
-      GraphQL을 사용하며 전역에서 사용하는 state 관리는 Apollo client을
-      활용하기로 하였습니다. authontication관련 state를 apollo client state에
-      정의하여 서비스 전역에서 사용하였습니다. 결과적으로 서버와의 통신은 더
-      간소화 되었고 Client에서 쿼리를 정의하여 버그가 더 줄어들었고 state 관리도
-      가벼워졌습니다.
-    </p>
+    /* Indent toggle children */
+    .toggle>li>details {
+      padding-left: 1.7em;
+    }
 
-    <h2 id="5server">5. Server 관련 세부사항</h2>
+    .toggle>li>details>summary {
+      margin-left: -1.1em;
+    }
 
-    <h3 id="51restfulapiapolloserver">5-1 RestFul API → Apollo Server</h3>
+    .selected-value {
+      display: inline-block;
+      padding: 0 0.5em;
+      background: rgba(206, 205, 202, 0.5);
+      border-radius: 3px;
+      margin-right: 0.5em;
+      margin-top: 0.3em;
+      margin-bottom: 0.3em;
+      white-space: nowrap;
+    }
 
-    <p>
-      Restful API를 지향하는 API server를 작성하였습니다. 라우터를 만들고 각
-      라우터별로 http method에 따른 요청,응답을 정의 하였습니다. 작업이 많이
-      진행되는 상황에서 GraphQL로 바꾸게 되었습니다. 그 이유는 많은 라우터를
-      관리하는 것에 대한 불편함과 Query를 client에서도 정의하여 버그를 최소화 할
-      수 있을것 같았기 때문이었습니다. 생각했던 대로 메소드 단위로 정의하는
-      Graphql QL의 코드는 더욱 간결해졌고 client에서 타입을 정의하여서 더욱
-      안전한 코드를 작성할 수 있었습니다.
-    </p>
+    .collection-title {
+      display: inline-block;
+      margin-right: 1em;
+    }
 
-    <h3 id="52authentication">5-2 Authentication</h3>
+    time {
+      opacity: 0.5;
+    }
 
-    <p>
-      json web token을 사용하여 인증을 구현하였습니다. html5 webstorage인
-      localstorage에 token을 저장하고 인증하는 로직을 구현하였습니다.
-    </p>
-  </body>
+    .icon {
+      display: inline-block;
+      max-width: 1.2em;
+      max-height: 1.2em;
+      text-decoration: none;
+      vertical-align: text-bottom;
+      margin-right: 0.5em;
+    }
+
+    img.icon {
+      border-radius: 3px;
+    }
+
+    .user-icon {
+      width: 1.5em;
+      height: 1.5em;
+      border-radius: 100%;
+      margin-right: 0.5rem;
+    }
+
+    .user-icon-inner {
+      font-size: 0.8em;
+    }
+
+    .text-icon {
+      border: 1px solid #000;
+      text-align: center;
+    }
+
+    .page-cover-image {
+      display: block;
+      object-fit: cover;
+      width: 100%;
+      height: 30vh;
+    }
+
+    .page-header-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .page-header-icon-with-cover {
+      margin-top: -0.72em;
+      margin-left: 0.07em;
+    }
+
+    .page-header-icon img {
+      border-radius: 3px;
+    }
+
+    .link-to-page {
+      margin: 1em 0;
+      padding: 0;
+      border: none;
+      font-weight: 500;
+    }
+
+    p>.user {
+      opacity: 0.5;
+    }
+
+    td>.user,
+    td>time {
+      white-space: nowrap;
+    }
+
+    input[type="checkbox"] {
+      transform: scale(1.5);
+      margin-right: 0.6em;
+      vertical-align: middle;
+    }
+
+    p {
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+    }
+
+    .image {
+      border: none;
+      margin: 1.5em 0;
+      padding: 0;
+      border-radius: 0;
+      text-align: center;
+    }
+
+    .code,
+    code {
+      background: rgba(135, 131, 120, 0.15);
+      border-radius: 3px;
+      padding: 0.2em 0.4em;
+      border-radius: 3px;
+      font-size: 85%;
+      tab-size: 2;
+    }
+
+    code {
+      color: #eb5757;
+    }
+
+    .code {
+      padding: 1.5em 1em;
+    }
+
+    .code>code {
+      background: none;
+      padding: 0;
+      font-size: 100%;
+      color: inherit;
+    }
+
+    blockquote {
+      font-size: 1.25em;
+      margin: 1em 0;
+      padding-left: 1em;
+      border-left: 3px solid rgb(55, 53, 47);
+    }
+
+    .bookmark-href {
+      font-size: 0.75em;
+      opacity: 0.5;
+    }
+
+    .sans {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+    }
+
+    .code {
+      font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+    }
+
+    .serif {
+      font-family: Lyon-Text, Georgia, KaiTi, STKaiTi, '华文楷体', KaiTi_GB2312, '楷体_GB2312', serif;
+    }
+
+    .mono {
+      font-family: Nitti, 'Microsoft YaHei', '微软雅黑', monospace;
+    }
+
+    .pdf .sans {
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR';
+    }
+
+    .pdf .code {
+      font-family: Source Code Pro, 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR';
+    }
+
+    .pdf .serif {
+      font-family: PT Serif, Lyon-Text, Georgia, KaiTi, STKaiTi, '华文楷体', KaiTi_GB2312, '楷体_GB2312', serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR';
+    }
+
+    .pdf .mono {
+      font-family: PT Mono, Nitti, 'Microsoft YaHei', '微软雅黑', monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR';
+    }
+
+    .highlight-default {}
+
+    .highlight-gray {
+      color: rgb(155, 154, 151);
+    }
+
+    .highlight-brown {
+      color: rgb(100, 71, 58);
+    }
+
+    .highlight-orange {
+      color: rgb(217, 115, 13);
+    }
+
+    .highlight-yellow {
+      color: rgb(223, 171, 1);
+    }
+
+    .highlight-teal {
+      color: rgb(15, 123, 108);
+    }
+
+    .highlight-blue {
+      color: rgb(11, 110, 153);
+    }
+
+    .highlight-purple {
+      color: rgb(105, 64, 165);
+    }
+
+    .highlight-pink {
+      color: rgb(173, 26, 114);
+    }
+
+    .highlight-red {
+      color: rgb(224, 62, 62);
+    }
+
+    .highlight-gray_background {
+      background: rgb(235, 236, 237);
+    }
+
+    .highlight-brown_background {
+      background: rgb(233, 229, 227);
+    }
+
+    .highlight-orange_background {
+      background: rgb(250, 235, 221);
+    }
+
+    .highlight-yellow_background {
+      background: rgb(251, 243, 219);
+    }
+
+    .highlight-teal_background {
+      background: rgb(221, 237, 234);
+    }
+
+    .highlight-blue_background {
+      background: rgb(221, 235, 241);
+    }
+
+    .highlight-purple_background {
+      background: rgb(234, 228, 242);
+    }
+
+    .highlight-pink_background {
+      background: rgb(244, 223, 235);
+    }
+
+    .highlight-red_background {
+      background: rgb(251, 228, 228);
+    }
+
+    .block-color-default {
+      color: inherit;
+      fill: inherit;
+    }
+
+    .block-color-gray {
+      color: rgba(55, 53, 47, 0.6);
+      fill: rgba(55, 53, 47, 0.6);
+    }
+
+    .block-color-brown {
+      color: rgb(100, 71, 58);
+      fill: rgb(100, 71, 58);
+    }
+
+    .block-color-orange {
+      color: rgb(217, 115, 13);
+      fill: rgb(217, 115, 13);
+    }
+
+    .block-color-yellow {
+      color: rgb(223, 171, 1);
+      fill: rgb(223, 171, 1);
+    }
+
+    .block-color-teal {
+      color: rgb(15, 123, 108);
+      fill: rgb(15, 123, 108);
+    }
+
+    .block-color-blue {
+      color: rgb(11, 110, 153);
+      fill: rgb(11, 110, 153);
+    }
+
+    .block-color-purple {
+      color: rgb(105, 64, 165);
+      fill: rgb(105, 64, 165);
+    }
+
+    .block-color-pink {
+      color: rgb(173, 26, 114);
+      fill: rgb(173, 26, 114);
+    }
+
+    .block-color-red {
+      color: rgb(224, 62, 62);
+      fill: rgb(224, 62, 62);
+    }
+
+    .block-color-gray_background {
+      background: rgb(235, 236, 237);
+    }
+
+    .block-color-brown_background {
+      background: rgb(233, 229, 227);
+    }
+
+    .block-color-orange_background {
+      background: rgb(250, 235, 221);
+    }
+
+    .block-color-yellow_background {
+      background: rgb(251, 243, 219);
+    }
+
+    .block-color-teal_background {
+      background: rgb(221, 237, 234);
+    }
+
+    .block-color-blue_background {
+      background: rgb(221, 235, 241);
+    }
+
+    .block-color-purple_background {
+      background: rgb(234, 228, 242);
+    }
+
+    .block-color-pink_background {
+      background: rgb(244, 223, 235);
+    }
+
+    .block-color-red_background {
+      background: rgb(251, 228, 228);
+    }
+
+    .checkbox {
+      display: inline-flex;
+      vertical-align: text-bottom;
+      width: 16;
+      height: 16;
+      background-size: 16px;
+      margin-left: 2px;
+      margin-right: 5px;
+    }
+
+    .checkbox-on {
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+    }
+
+    .checkbox-off {
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+    }
+  </style>
+</head>
+
+<body>
+  <article id="b5ef7e8d-c81d-4b5c-94bd-50ca71205ec7" class="page sans">
+    <header>
+      <h1 class="page-title">H-SENS</h1>
+    </header>
+    <div class="page-body">
+      <p id="d53466ee-67ef-4605-a4a6-5de7e0ad111b" class="">
+      </p>
+      <h2 id="ec4b4ec8-bb0f-4134-a797-34d73709ca49" class="">1. Skills</h2>
+      <p id="3ae72a43-b0b7-432b-9457-8d2eaeb2f3e8" class="">
+      </p>
+      <p id="24fed39a-5ab8-4128-be50-49f1c8bbcee2" class="">Styled Component | React(Hooks) | GraphQL | Apollo | Node.js
+        | MongoDB</p>
+      <p id="91ab6dda-2d73-48da-8d42-0f1344b88ece" class="">
+      </p>
+      <h2 id="d7a6cd04-72cc-4d05-a0f1-1e8d5d330148" class="">2. 개발 방식</h2>
+      <p id="64e0ac9a-6d99-46d2-b7a3-6102e1edebc8" class="">
+      </p>
+      <p id="76fa5cee-414a-4f50-a14e-1a9467197545" class="">이번 프로젝트는 다음 세 가지에 초점을 맞췄습니다.</p>
+      <p id="387bb0b7-d914-4832-93b1-192f4ce9244f" class="">
+      </p>
+      <ol id="746cb6e7-34d8-40e8-86fd-937540af7490" class="numbered-list" start="1">
+        <li><strong>협업 프로세스에 대한 깊은 경험을 한다.</strong></li>
+      </ol>
+      <ol id="67e3d8c1-783d-43ee-9012-d1c1e87d56bb" class="numbered-list" start="2">
+        <li><strong>설계에 신경 쓴 프론트 엔드 코드를 작성하자.</strong></li>
+      </ol>
+      <ol id="49de5b19-e5ac-4fd3-956f-ff1e2cd9b96d" class="numbered-list" start="3">
+        <li><strong>백엔드 코드를 구현하여 HTTP 통신에 대해서 더 깊이 이해하도록 노력한다.</strong></li>
+      </ol>
+      <p id="06190265-1163-4771-a704-d35aff52106e" class="">
+      </p>
+      <p id="2e4dc33b-301d-4568-a010-1b07fc4467e6" class="">두 명으로 구성된 팀으로 개발한 프로젝트이며 github를 사용해서 개발을 진행하였습니다.</p>
+      <p id="8c870d0e-0744-4279-8fba-c90b956986c8" class="">
+      </p>
+      <h3 id="5cc2ab58-a106-425f-955e-520413a52f0c" class="">2-1 협업</h3>
+      <p id="8f27b0bd-6ef6-4783-a4a2-74bdc1958f1e" class="">
+      </p>
+      <ul id="a13ac09d-00d2-4eb4-860b-9c3b0e140354" class="bulleted-list">
+        <li><strong>회의 및 프로젝트 기본 개요</strong>: Wiki를 사용하여 진행하였습니다.</li>
+      </ul>
+      <ul id="b5caaec8-2b6f-420d-844c-d5497c1071c3" class="bulleted-list">
+        <li><strong>업무 분담</strong>: issues 탭에 milestone을 추가하고 해당 내용에 해당하는 세부적인 내용은 issue를 추가하여 관리하였습니다.</li>
+      </ul>
+      <ul id="2ebe89d3-ee70-45f7-86fa-7ca0bdca14b9" class="bulleted-list">
+        <li><strong>업무 진행 상황</strong>: project에 todo List를 추가하여 관리하였습니다.</li>
+      </ul>
+      <ul id="d745e660-e095-4a51-a6f2-8fccc3333fdf" class="bulleted-list">
+        <li><strong>Sprint</strong>: 스프린트 단위는 1주를 기본으로 하고 이후에 feature branch를 dev branch에 머지했습니다. 이후 버전 별로 릴리즈를 하여 태그를
+          추가하였습니다.</li>
+      </ul>
+      <ul id="dd62fe55-b040-4628-9d54-c203d914f521" class="bulleted-list">
+        <li><strong>Commutication:</strong> 리모트 형식으로 작업을 진행하였고 slack을 이용하였습니다.</li>
+      </ul>
+      <p id="e959b92c-6dd0-4846-bfca-7d7f44af8b77" class="">
+      </p>
+      <h3 id="5d332828-8228-4f8f-ab7b-f0a391e653a8" class="">2-2 Client</h3>
+      <p id="3a8ee3e6-461c-4865-af06-cf92ca7059e0" class="">
+      </p>
+      <ul id="ea85fc32-cd50-44aa-a632-7a66a62b736c" class="bulleted-list">
+        <li><strong>설계</strong></li>
+      </ul>
+      <p id="2697e5e0-bf46-4126-b3aa-b736d2de6bb1" class="">
+      </p>
+      <p id="cdb2591b-d899-45cd-9b94-eda67769aa2a" class="">이번 프로젝트에서 TDD를 사용하지는 않았지만 지난 amazon project를 진행 하며 설계의 중요성을
+        깨달았고 이번 프로젝트도 그렇게 진행하고 싶었습니다. 프로젝트를 시작한 첫 주는 설계에 초점을 둔 기획회의의 연속이었습니다. 노트, 화이트보드에 <strong>컴포넌트 간 의존 관계</strong>를
+        그리고 연결 해보았습니다. 또 서비스에 필요한 기능을 구체화 했습니다. </p>
+      <p id="8681ec9c-5182-465d-becf-fca07ca4421a" class="">
+      </p>
+      <ul id="73032894-18ed-49cc-b848-dfa3ac8fc1c4" class="bulleted-list">
+        <li><strong>디자인</strong></li>
+      </ul>
+      <p id="697bb332-aa5f-4372-a476-05fef9ef6f42" class="">
+      </p>
+      <p id="84473d0a-c2d7-4156-b440-0e50bbf5720b" class="">주제와 컨셉이 정해진 후 개발 방식에 대해서 고민해 보았습니다. 디자인에 대해서 많은 시간을 투자하기 힘든
+        상황이었기 때문에 페이지 별 기능을 정의하고 큰 맥락에서 컴포넌트 간의 의존관계를 정의한 후 코드를 작성하면서 레이이웃을 잡아갔습니다. </p>
+      <p id="ded13061-327a-441f-8847-e34cb980439f" class="">
+      </p>
+      <h3 id="5f46db36-7f86-4014-a0c7-caae40c1d427" class="">2-3 Server</h3>
+      <p id="802ed231-ec80-4457-ae39-9cdd46d0eee8" class="">
+      </p>
+      <ul id="5e4d4c3e-d153-4a5c-b316-28c6affc53db" class="bulleted-list">
+        <li><strong>설계</strong></li>
+      </ul>
+      <p id="677e8cfd-8817-4bc6-8fa5-5fe67f87d1f5" class="">
+      </p>
+      <p id="99f41186-384e-4c0d-9720-9d1a39f66785" class="">프론트엔드 설계를 완료한 후 백엔드 설계를 시작하였습니다. 각 컴포넌트 별로 필요한 데이터를 정리하고 해당
+        데이터에 따른 Router를 만들었습니다. 초기엔 Restful API를 지향했지만 이후 GraphQL을 사용하여 재정의 하였습니다. </p>
+      <p id="783eac11-f35d-4719-af02-7bbccfcb3b28" class="">
+      </p>
+      <ul id="0e475fef-18a4-4b88-9a05-94f23b16886d" class="bulleted-list">
+        <li><strong>데이터베이스</strong></li>
+      </ul>
+      <p id="6de90e93-4878-4748-81e5-1b62401571c0" class="">
+      </p>
+      <p id="ea0211b1-f5d8-4701-9cbc-67c239c37a2c" class="">No-SQL기반의 Mongodb를 사용했습니다. 프론트엔드 개발자이기에 데이터베이스에 대한 이론 지식이
+        부족해서 해당 데이터베이스의 장점을 파악하며 DB를 설계하기 위해 노력했습니다. </p>
+      <p id="76981d2e-bb54-4a83-b60b-e7cba47e2e9e" class="">
+      </p>
+      <p id="c6236226-94a3-4244-8f6c-2e0ac7b724bb" class="">
+      </p>
+      <h2 id="28790890-74cc-4193-95cf-d18f92634e2f" class="">3. 협업 관련 세부사항</h2>
+      <p id="a999c466-e2fc-4bcc-b860-24ed3502e205" class="">
+      </p>
+      <h3 id="5d2c4b65-7f86-466e-9aa3-377ff9fa879f" class="">3-1 협업 관련 커뮤니케이션</h3>
+      <p id="c301f1a1-29de-4e4c-b9aa-d7192a661d57" class="">
+      </p>
+      <p id="2a1dba65-96dd-4d64-94b2-d056f5685110" class="">리모트 형식으로 개발을 진행했기 때문에 이 부분에 굉장히 중요했습니다. 협업 관련 툴은 slack과
+        github를 사용했습니다. </p>
+      <p id="b1d94d21-aac6-4f9c-87a9-010d7f05cae6" class="">
+      </p>
+      <ul id="2c53660d-470f-44e6-a1b2-b15ccb4875e2" class="bulleted-list">
+        <li>slack: 프로젝트 관련 작은 부분들에 대한 이야기를 나눌때 slack을 통해 커뮤니케이션을 하였습니다. </li>
+      </ul>
+      <ul id="bf9f9540-1e09-4f29-b807-7e8d7c7fa2a8" class="bulleted-list">
+        <li>github<ul id="0a7f42ea-a68a-47bc-8091-338430934ba8" class="bulleted-list">
+            <li>issues: mileston을 정의하고 각자 해야 하는 작업에 대해서 github의 issues 탭을 사용했습니다. 해결된 이슈에 대해서는 close하기 전 commit id를 적어
+              두어 프로젝트 진행 로그를 남겼습니다. </li>
+          </ul>
+          <ul id="1a9e834a-dc76-49c1-bf8d-3728900a2757" class="bulleted-list">
+            <li>project: github의 project 탭을 사용하여 todo를 정의하였습니다. issues와 관련된 작업들을 시각화하기 위해 사용하였습니다. </li>
+          </ul>
+          <ul id="8ef31b78-a99a-4ceb-b095-6314c906dc91" class="bulleted-list">
+            <li>wiki: 회의록과 프로젝트 관련 정의를 하기 위해서 wiki 탭을 사용하였습니다. 프로젝트에 관련된 정의들을 적어 두었기 때문에 이후 프로젝트 진행을 하면서 지난 기록들을 보면서 작업을
+              진행하기에 좋았습니다. </li>
+          </ul>
+          <p id="495aa54d-9bbe-4da8-b200-07c9e4c88f3a" class="">
+          </p>
+        </li>
+      </ul>
+      <h3 id="feab7d66-d3c5-4492-ae91-ffa4e02ebf26" class="">3-2 sprint</h3>
+      <p id="de097d7d-d77b-44d1-8509-1a9f6793a0d7" class="">
+      </p>
+      <p id="5d0b3404-4e35-4830-87d0-11e4f9713bc6" class="">1주 단위로 sprint를 나눴습니다. 매 주 sprint+해당 주 차(예, sprint1)의 브랜치를
+        만들었습니다. 또 금요일에 해당 주에 각자의 issues를 마무리하고 회고를 한 뒤 dev 브랜치에 머지한 후 릴리즈를 하여 tag를 추가했습니다. </p>
+      <p id="0ff9f92e-86f8-4bbd-8b7a-e0066c47f0fd" class="">
+      </p>
+      <h2 id="f82a893c-bedb-40ab-9f4e-31537de32ea5" class="">4. Client 관련 세부사항</h2>
+      <p id="b964055e-ffe2-4cb5-b586-1684644fa3d5" class="">
+      </p>
+      <h3 id="55e16cd3-3d12-4b0f-98d3-4ce3816166aa" class="">4-1 컴포넌트 설계</h3>
+      <p id="5f4b764d-1c74-473d-845f-5dc4f00250e3" class="">
+      </p>
+      <p id="bc362805-0045-4d12-a46b-191f8b652f8f" class="">컴포넌트를 나누는 방식에 대한 많은 고민이 있었는데요. 많은 고민을 했던 부분이기 때문에 세 번의 변경이
+        있었습니다. </p>
+      <p id="49fad6f9-1cff-426f-a1e1-7552413b0364" class="">
+      </p>
+      <p id="3605bb0b-e06a-4eb6-9f79-66013f9a3e8a" class=""><mark class="highlight-blue"><strong>1) 모든 컴포넌트를 Component
+            폴더에 넣고 Router 파일을 정의하기</strong></mark></p>
+      <p id="e33aed90-b13d-43a4-9aa1-0f468af7e628" class="">
+      </p>
+      <p id="5cf193ac-a4c7-4047-8ee9-018e851503b5" class="">모든 page에 대한 컴포넌트에서 버튼 같이 작은 컴포넌트까지 모든 파일을 Component 폴더에
+        정의하였습니다. 또 router관련한 정의는 router 파일에 모두 작성하였습니다. 이렇게 정의하는 것에 대해서 고민이 생겼습니다. state관리를 하는 컴포넌트의 크기가 너무 커진다는 것이었습니다.
+        이 방식을 해결하기 위해서 구글링을 하였고 Presenter, Container로 역할을 나눈 컴포넌트 설계 방식을 찾게 되었습니다. </p>
+      <p id="d2f4d9c5-9c92-4522-a400-17a4f13d69fa" class="">
+      </p>
+      <p id="1240a792-62c0-4126-b31f-cea1d0bd9390" class=""><mark class="highlight-blue"><strong>2) Component 폴더 내부를
+            Presenter, Container 폴더로 나누기</strong></mark></p>
+      <p id="06d2f0f3-4b6f-42bf-a9dc-165e2dc40a39" class="">
+      </p>
+      <p id="0d77a29d-4a00-4ad3-94a4-5679284efdae" class="">Component 폴더 내부에 모든 파일들의 두 가지 분류로 나눴습니다. state를 관리하는 컴포넌트는
+        Container 폴더로, 템플릿 관련 기능을 하는 컴포넌트는 Presenter에 두었습니다. 처음 폴더 구조를 재 설정하여 코드를 작성할 때는 순조로웠습니다. 하지만 시간이 지날 수록 같은 일을 하는
+        컴포넌트 간의 거리가 멀어서 리펙토링이 불편했고 굳이 깊이를 한 단계 더 만드는 것이 불필요하다는 생각이 들었습니다. </p>
+      <p id="410a7307-cbb7-4780-ba7b-7c7ea38a29ed" class="">
+      </p>
+      <p id="8c72f636-3ee2-49ff-aeca-16b79df33473" class=""><mark class="highlight-blue"><strong>3) Router 기분으로 컴포넌트
+            나누기</strong></mark></p>
+      <p id="34f27aa1-f73d-4b37-ab6a-c16d8dd787db" class="">
+      </p>
+      <p id="d22520e8-559e-4d7d-8e93-a42dc0eb16ff" class="">기존의 Container 폴더와 Presenter 폴더를 제거하였습니다. Router 기준으로 컴포넌트를
+        생성하였습니다. 페이지 별로 컴포넌트를 만들고 재사용의 가치가 있는 컴포넌트들을 따로 구성하였습니다. 맨 처음 설계한 <strong><mark
+            class="highlight-blue">1)</mark></strong> 구조와 비슷했지만 차이가 있습니다. 새롭게 변경한 설계에서는 각 컴포넌트에서 state 관리로 인하여 파일이 크기가
+        커진 상황이 오면 그 컴포넌트 내부의 파일에 대해서 state 관리를 하는 Container 역할의 컴포넌트, 템플레이팅 기능을 하는 Presenter 컴포넌트로 나눴습니다. 결과적으로 컴포넌트의
+        역할이 더 명확해졌고 컴포넌트의 응집성이 높아졌습니다. </p>
+      <p id="04bdb635-d330-4067-831b-747ca12da929" class="">
+      </p>
+      <h3 id="a9e8db59-4cde-4ffc-bd7d-4a90c084834d" class="">4-2 state 관리</h3>
+      <p id="34a48a9e-3832-49cc-be90-f884cf956135" class="">
+      </p>
+      <p id="394aaa47-b997-4be7-bb63-f6166094e7ed" class="">state 관리에 대해서도 세 번의 변경이 있었습니다. </p>
+      <p id="067e97a9-e3e2-4743-8615-ef148534c00d" class="">
+      </p>
+      <p id="6d2621ac-23c8-4286-964b-002c30e20ff6" class=""><strong><mark class="highlight-blue">1) useState,
+            useEffect</mark></strong></p>
+      <p id="60693b85-33d5-443f-a802-8b01fa2b33cb" class="">
+      </p>
+      <p id="f0ba289f-c2ed-4ea0-95eb-d62105bacbf7" class="">Hooks로 개발을 시작했기 때문에 시작은 useState와 useEffect를 사용하여 state를
+        관리하였습니다. 처음엔 해당 메서드로 state 관리를 해도 충분했지만 컴포넌트의 depth가 깊어지자 점점 관리하기 복잡한 부분이 생겨났습니다. props의 전달에 복잡함에 flux
+        architecture를 활용하기로 했습니다. </p>
+      <p id="2c442c75-4cf2-402d-8cab-1eb7d0b9d172" class="">
+      </p>
+      <p id="ae043a29-f173-4daf-9640-dcef500dc3e0" class=""><mark class="highlight-blue"><strong>2) useContext,
+            useReducer</strong></mark></p>
+      <p id="8cb8cd83-edb3-418f-88dc-05a9460cf8b3" class="">
+      </p>
+      <p id="2c8c0c92-05fa-42ad-88ea-103676767103" class="">action, store, dispatch의 역할을 통해 state를 전역에서 관리하는 Flux
+        Architecture의 방식을 활용하여 action을 정의하고 useContext로 store을 만들고 useReducer를 dispatch로 사용하였습니다. 이 방식을 사용하며 state 관리을
+        간소화 하였습니다. 하지만 이 작업을 마친 후 restful API를 통해 정의하는 과정에서 url관리의 복잡함을 느꼈기 때문에 GraphQL을 도입하게 되었습니다. </p>
+      <p id="06494135-1e28-41e0-99be-b033086b08f8" class="">
+      </p>
+      <p id="f4d83b21-9df8-4737-af7a-fb344c3ad21b" class=""><mark class="highlight-blue"><strong>3) Apollo Client
+            Server</strong></mark></p>
+      <p id="5c00677a-ef87-4b47-be4f-c6a63dd6e9d5" class="">
+      </p>
+      <p id="ff2ba4c1-af1d-40d9-8b37-f7dec7856ad9" class="">GraphQL을 사용하며 전역에서 사용하는 state 관리는 Apollo client을 활용하기로
+        하였습니다. authontication관련 state를 apollo client state에 정의하여 서비스 전역에서 사용하였습니다. 결과적으로 서버와의 통신은 더 간소화 되었고 Client에서 쿼리를
+        정의하여 버그가 더 줄어들었고 state 관리도 가벼워졌습니다. </p>
+      <p id="3b738a58-3687-484b-95cc-2e646747a363" class="">
+      </p>
+      <h2 id="4855df8c-484e-4a40-9806-ea88d32200d0" class="">5. Server 관련 세부사항</h2>
+      <p id="6e1d110f-9511-4a54-8b0f-dd464c73fbb0" class="">
+      </p>
+      <h3 id="8c633990-349e-437f-832b-eb1a7b86505a" class="">5-1 RestFul API → Apollo Server</h3>
+      <p id="f04f8d3a-e987-4b50-9479-9abdd32e37a3" class="">
+      </p>
+      <p id="787a3c64-8e6a-4083-8908-8f859968339b" class="">Restful API를 지향하는 API server를 작성하였습니다. 라우터를 만들고 각 라우터별로 http
+        method에 따른 요청,응답을 정의 하였습니다. 작업이 많이 진행되는 상황에서 GraphQL로 바꾸게 되었습니다. 그 이유는 많은 라우터를 관리하는 것에 대한 불편함과 Query를 client에서도
+        정의하여 버그를 최소화 할 수 있을것 같았기 때문이었습니다. 생각했던 대로 메소드 단위로 정의하는 Graphql QL의 코드는 더욱 간결해졌고 client에서 타입을 정의하여서 더욱 안전한 코드를
+        작성할 수 있었습니다. </p>
+      <p id="befd3faa-61e0-4ac4-9c5a-e040d79ee3ce" class="">
+      </p>
+      <h3 id="18cf60e4-5eae-4177-935f-9a01618aeec4" class="">5-2 Authentication</h3>
+      <p id="18050786-6965-4b2d-9899-d7be93e23820" class="">
+      </p>
+      <p id="d2b95ec7-b790-45a3-8f50-60eb38476e63" class="">json web token을 사용하여 인증을 구현하였습니다. html5 webstorage인
+        localstorage에 token을 저장하고 인증하는 로직을 구현하였습니다. </p>
+      <p id="bed2916e-b477-4c4f-9ff1-22bf4d87dab9" class="">
+      </p>
+    </div>
+  </article>
+</body>
+
 </html>
