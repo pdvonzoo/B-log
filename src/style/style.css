@@ -118,6 +118,9 @@ div.wrapper {
   min-height: 100vh;
 }
 
+.project {
+  font-family: "Roboto", sans-serif;
+}
 .project__header {
   position: relative;
   height: 90vh;
@@ -148,7 +151,7 @@ div.wrapper {
 }
 .project__group {
   margin-bottom: 7rem;
-  padding: 0 5rem;
+  padding: 0 20rem;
 }
 .project__group h1 {
   font-size: 4rem;
@@ -186,12 +189,16 @@ div.wrapper {
   line-height: 1.8rem;
 }
 .project__group pre {
-  width: 50%;
+  width: 70%;
   margin: 5rem 0;
   font-size: 1.5rem;
   background-color: #f5f5ef;
   padding: 2.5rem 2rem;
   border-radius: 0.3rem;
+}
+.project__group pre code {
+  white-space: pre-wrap;
+  line-height: 2rem;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
