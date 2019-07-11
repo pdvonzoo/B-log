@@ -1,14 +1,13 @@
 @import url("https://fonts.googleapis.com/css?family=Oswald:200&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Anton&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Harmattan&display=swap");
-
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 .description {
-  font-family: "Anton", sans-serif;
-  font-size: 6rem;
-  line-height: 8rem;
-  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: 5.5rem;
+  line-height: 6rem;
+  color: #040404;
 }
-
 .description_special {
   color: #ff4d25;
 }
@@ -18,7 +17,6 @@
   padding-top: 5rem;
   margin: 5rem 0;
 }
-
 .description-etc__title {
   font-family: "Harmattan", sans-serif;
   font-size: 2.3rem;
@@ -26,15 +24,13 @@
   color: #ff4d25;
   padding-bottom: 1rem;
 }
-
 .description-etc__p {
   font-family: "Harmattan", sans-serif;
   line-height: 2.5rem;
   font-weight: 300;
   font-size: 2rem;
-  color: #fff;
+  color: #040404;
 }
-
 .description-etc__p__bar {
   font-size: 1.7rem;
 }
@@ -43,7 +39,7 @@
   font-size: 1.5rem;
   font-family: "Oswald", sans-serif;
   font-weight: 200;
-  color: #fff;
+  color: #040404;
   padding: 0 0.9rem;
 }
 
@@ -51,7 +47,7 @@
   font-size: 1.5rem;
   font-family: "Oswald", sans-serif;
   font-weight: 200;
-  color: #fff;
+  color: #040404;
 }
 
 .projects {
@@ -59,16 +55,13 @@
   padding: 5rem 10rem;
   padding-top: 0rem;
 }
-
 .projects .description {
   padding-bottom: 10rem;
 }
-
 .projects__line {
   display: flex;
   justify-content: space-between;
 }
-
 .projects__card {
   display: inline-block;
   width: 44%;
@@ -78,36 +71,26 @@
   min-height: 60vh;
   background-color: #fff;
 }
-
-/* .projects__card:hover {
-  -webkit-filter: contrast(200%);
-  filter: contrast(200%);
-} */
 .projects__card__wrapper {
   width: 100%;
   height: 100%;
   padding: 4rem 2rem;
 }
-
 .projects__amazon {
-  background-color: #232f3e;
+  background-color: #1f191a;
   color: #f8fbfb;
 }
-
 .projects__amazon__skills {
-  color: #ff9901;
   font-size: 1.7rem;
   font-weight: 400;
   line-height: 2rem;
 }
-
 .projects__amazon__description {
   margin-top: 1rem;
   font-size: 1.7rem;
   font-weight: 400;
   line-height: 2rem;
 }
-
 .projects__hsens {
   background-color: #f1ece6;
   color: #034ea2;
@@ -118,31 +101,96 @@
   overflow: hidden;
   padding: 5rem 10rem;
 }
-
 #header .bsens {
   display: flex;
   justify-content: space-between;
 }
-
+#header .logo {
+  width: 23rem;
+}
 #header .description {
-  padding-top: 15rem;
+  padding-top: 10rem;
 }
 
 div.wrapper {
-  background-color: #333333;
+  background-color: #fff;
   min-height: 100vh;
 }
 
-.project-page__header {
-  width: 100%;
-  height: 30vh;
-  font-size: 5rem;
-  font-weight: bold;
-  line-height: 20vh;
+.project__header {
+  position: relative;
+  height: 90vh;
+  text-align: center;
 }
-
-.project-page h2 {
-  font-size: 2rem;
+.project__header--amazon {
+  background-color: #1f191a;
+}
+.project__header--amazon h1 {
+  color: #fff;
+}
+.project__header--hsens {
+  background-color: #f1ece6;
+}
+.project__header--hsens h1 {
+  color: #034ea2;
+}
+.project__header h1 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-100%);
+  font-size: 6rem;
+  font-weight: bold;
+}
+.project__wrapper {
+  padding-top: 10vh;
+}
+.project__group {
+  margin-bottom: 7rem;
+  padding: 0 5rem;
+}
+.project__group h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+.project__group h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 5rem;
+  color: #e84545;
+}
+.project__group h3 {
+  font-size: 2.5rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+.project__group p {
+  font-size: 1.4rem;
+  line-height: 2.3rem;
+  margin-bottom: 1rem;
+}
+.project__group ol {
+  margin-bottom: 1rem;
+}
+.project__group ol li {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+}
+.project__group ul {
+  margin-bottom: 1rem;
+}
+.project__group ul li {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+}
+.project__group pre {
+  width: 50%;
+  margin: 5rem 0;
+  font-size: 1.5rem;
+  background-color: #f5f5ef;
+  padding: 2.5rem 2rem;
+  border-radius: 0.3rem;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 

@@ -1,13 +1,96 @@
-.project-page {
+.project {
+
   &__header {
-    width: 100%;
-    height: 30vh;
-    font-size: 5rem;
-    font-weight: bold;
-    line-height: 20vh;
+    position: relative;
+
+    height: 90vh;
+    text-align: center;
+
+    &--amazon {
+      background-color: #1f191a;
+
+      h1 {
+        color: #fff;
+      }
+    }
+
+    &--hsens {
+      background-color: #f1ece6;
+
+      h1 {
+        color: #034ea2;
+      }
+
+    }
+
+    h1 {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-100%);
+      font-size: 6rem;
+      font-weight: bold;
+    }
   }
 
-  h2 {
-    font-size: 2rem;
+  &__wrapper {
+    padding-top: 10vh;
+  }
+
+  &__group {
+    margin-bottom: 7rem;
+    padding: 0 5rem;
+
+    h1 {
+      font-size: 4rem;
+      font-weight: bold;
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 5rem;
+      color: #e84545;
+    }
+
+    h3 {
+      font-size: 2.5rem;
+      margin-top: 5rem;
+      margin-bottom: 5rem;
+    }
+
+    p {
+      font-size: 1.4rem;
+      line-height: 2.3rem;
+      margin-bottom: 1rem;
+    }
+
+    ol {
+      margin-bottom: 1rem;
+
+      li {
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+      }
+    }
+
+    ul {
+      margin-bottom: 1rem;
+
+      li {
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+      }
+    }
+
+    pre {
+      width: 50%;
+      margin: 5rem 0;
+      font-size: 1.5rem;
+      background-color: #f5f5ef;
+      padding: 2.5rem 2rem;
+      border-radius: .3rem;
+    }
   }
 }

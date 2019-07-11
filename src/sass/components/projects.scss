@@ -21,10 +21,10 @@
     min-height: 60vh;
     background-color: #fff;
 
-    &:hover {
-      -webkit-filter: contrast(200%);
-      filter: contrast(200%);
-    }
+    // &:hover {
+    //   -webkit-filter: contrast(200%);
+    //   filter: contrast(200%);
+    // }
 
     &__wrapper {
       width: 100%;
@@ -34,7 +34,7 @@
   }
 
   &__amazon {
-    background-color: #2ea9a8;
+    background-color: #1f191a;
     color: #f8fbfb;
 
     &__skills {
